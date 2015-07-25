@@ -1,2 +1,3 @@
 # pytracker
-python back-tracker / spider framework - with knight's tour sample implementation
+single-thread python back-tracker / spider framework  
+with knight's tour sample implementation
