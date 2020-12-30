@@ -44,9 +44,9 @@ class Decider:
           options.append((x,y))
           
       moves = []
-      remaining = range(len(options))
+      remaining = list(range(len(options)))
       while (len(remaining) > 0):
-        idx = remaining.pop()#random.randint(0, len(remaining) - 1))        
+        idx = remaining.pop()#random.randint(0, len(remaining) - 1))
         moves.append(options[idx])
         
       for i in range(len(moves)):
@@ -61,7 +61,7 @@ class Decider:
       cur_depth = parent_state.depth()
       
       order = []
-      remaining = range(len(Decider.displacements))
+      remaining = list(range(len(Decider.displacements)))
       while (len(remaining) > 0):
         idx = remaining.pop()#random.randint(0, len(remaining) - 1))
         order.append(idx)     
