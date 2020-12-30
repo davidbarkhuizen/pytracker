@@ -9,7 +9,7 @@ class Decider:
   def solution_status(self, state):
     return (state.depth() == state.target_depth())
 
-  displacements = [\
+  displacements = [
       ( 1, 2),
       ( 2, 1),
       ( 2,-1),
@@ -46,7 +46,7 @@ class Decider:
       moves = []
       remaining = list(range(len(options)))
       while (len(remaining) > 0):
-        idx = remaining.pop()#random.randint(0, len(remaining) - 1))
+        idx = remaining.pop()
         moves.append(options[idx])
         
       for i in range(len(moves)):
@@ -63,7 +63,7 @@ class Decider:
       order = []
       remaining = list(range(len(Decider.displacements)))
       while (len(remaining) > 0):
-        idx = remaining.pop()#random.randint(0, len(remaining) - 1))
+        idx = remaining.pop()
         order.append(idx)     
       assert(len(order) == len(Decider.displacements))
       for i in range(len(order)):

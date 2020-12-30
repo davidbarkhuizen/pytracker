@@ -166,7 +166,7 @@ class BackTracker(object):
           else:             
             exit_criteria['solution_space_exhausted'] = True
             
-            logging.info('node {i%} has no parent.' % current_node.id)
+            logging.info(f'node {current_node.id} has no parent.')
             logging.info('solution space exhausted.')
        
     for exit_criterion in exit_criteria.keys():
