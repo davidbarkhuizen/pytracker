@@ -53,6 +53,8 @@ class BackTracker(object):
     rotator_interval = 10000
     
     exhaust_solution_space = True
+
+    solution_count = 0
     
     skip_solution = False
     while (True not in exit_criteria.values()):
@@ -64,6 +66,9 @@ class BackTracker(object):
       
       # SOLVED
       if (decider.solution_status(current_node.state) == True) and (skip_solution == False):
+        
+        solution_count += 1
+        
         exit_criteria['is_solved'] = True
         current_node.is_solution = True
         Node.tree[current_node.id] = current_node
@@ -72,7 +77,8 @@ class BackTracker(object):
         logging.info('state:')
         logging.info(str(current_node.state))        
         
-        print('solved')
+        s = 'solved: ' + str(solution_count)
+        print(s)
         print(str(current_node.state))
         
         if (exhaust_solution_space == True):

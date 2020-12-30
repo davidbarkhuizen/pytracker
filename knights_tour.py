@@ -20,9 +20,14 @@ from decider import Decider
 from back_tracker import BackTracker
 import random
 
+# 5	1,728
+# 6	6,637,920
+# 7	165,575,218,320
+# 8	19,591,828,170,979,904
+
 def main():
   
-  n = 6
+  n = 5 # 
 
   seed = datetime.now().microsecond
   random.seed(seed)
