@@ -1,6 +1,6 @@
 # pyTracker
 
-single-thread python 2 (!) back-tracker / spider framework  
+single-thread python back-tracker / spider framework  
 with knight's tour sample implementation
 
 ## Entrypoint
@@ -10,5 +10,5 @@ with knight's tour sample implementation
 ## Usage
 
 ```
-$ python knights_tour.py
+$ python3 knights_tour.py
 ```

@@ -1,3 +1,11 @@
+import argparse
+
+parser = argparse.ArgumentParser(description='pytracker - naive brute force solution to the knights tour problem')
+parser.add_argument('--size', help='5..8', type=int)
+args = parser.parse_args()
+
+N = args.size
+
 from datetime import datetime
 import logging
 LOG_FILE_PATH = ''
@@ -27,7 +35,8 @@ import random
 
 def main():
   
-  n = 5 # 
+  n = N
+  print(f'{n} x {n} board')
 
   seed = datetime.now().microsecond
   random.seed(seed)
